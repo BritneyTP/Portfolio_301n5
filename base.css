@@ -1,0 +1,81 @@
+
+body {
+  background-color: gray;
+  color: black;
+  font-family: "Questrial", sans-serif;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.logo {
+  height: 10%;
+  width: 10%;
+  border-radius: 50%;
+  display: inline;
+  margin: 2%;
+}
+
+header {
+  position: relative;
+  width: 100%;
+}
+
+header h1 h2 h3{
+  /*font-family: "Futura", sans-serif;*/
+  font-family: "Questrial", sans-serif;
+  font-size: 26px;
+  display: inline;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+
+.icon-menu {
+  font-size: 20px;
+  float: right;
+  position: absolute;
+  top: 30%;
+  right: 5%;
+}
+
+nav ul {
+  display: none;
+}
+
+
+
+
+
+footer {
+  position: fixed;
+  width: 100%;
+  height: 5%;
+  bottom: 0;
+  background-color: orange;
+  clear: both;
+}
+
+
+  nav ul {
+    display: inline;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+  }
+  nav ul li {
+    font-family: "Questrial", sans-serif;
+    display: inline;
+    float: right;
+    padding: 10px;
+  }
+
+  main section {
+    float: left;
+    margin: 3%;
+  }
+}
