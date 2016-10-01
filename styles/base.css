@@ -1,81 +1,68 @@
+* {
+  font-family: helvetica;
+}
 
 body {
-  background-color: gray;
-  color: black;
-  font-family: "Questrial", sans-serif;
-  position: relative;
+  line-height: 1.5;
+  font-size: 100%;
+
 }
 
-a {
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
+article {
+  border-bottom: 1px solid black;
+  margin: 0 3%;
 }
 
-.logo {
-  height: 10%;
-  width: 10%;
-  border-radius: 50%;
-  display: inline;
-  margin: 2%;
+.main-header {
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .9;
+  color: orange;
 }
-
 header {
+
+  height: 160px;
+  padding-top: 50px;
+  text-align: center;
   position: relative;
-  width: 100%;
+  color: white;
+  font-size: 50px;
+  background-color: rgba(100, 100, 100, 0.5);
+  margin-bottom: 60px;
+  margin-top: 40px;
 }
-
 header h1 {
-  /*font-family: "Futura", sans-serif;*/
-  font-family: "Questrial", sans-serif;
-  font-size: 26px;
-  display: inline;
-  position: absolute;
-  top: 30%;
-  left: 15%;
+  text-align: center;
+  font-size: 50px;
 }
 
-.icon-menu {
-  font-size: 20px;
-  float: right;
-  position: absolute;
-  top: 30%;
-  right: 5%;
+
+
+header h3 {
+  margin-top : 10px;
+  text-align: center;
+  font-size: 30px;
 }
 
-nav ul {
+
+.template {
   display: none;
 }
 
+a:visited {
+  color: black;
+}
 
-
-
-
-footer {
-  position: fixed;
-  width: 100%;
-  height: 5%;
-  bottom: 0;
-  background-color: orange;
-  clear: both;
+#articles h1 {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-size: 40px;
 }
 
 
-  nav ul {
-    display: inline;
-    position: absolute;
-    top: 30%;
-    right: 5%;
-  }
-  nav ul li {
-    font-family: "Questrial", sans-serif;
-    display: inline;
-    float: right;
-    padding: 10px;
-  }
-
-  main section {
-    float: left;
-    margin: 3%;
-  }
+.article-body {
+  border-bottom: 1px solid black;
+  padding-bottom: 25px;
+  text-align: justify;
 }
