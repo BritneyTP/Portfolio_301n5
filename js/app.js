@@ -1,7 +1,7 @@
 'use strict';
 var articles = [];
 
-/* Object constructor based on my data*/
+/* Object constructor based on data*/
 function Article(obj) {
   this.author = obj.author;
   this.publishedOn = obj.publishedOn;
@@ -10,7 +10,7 @@ function Article(obj) {
   this.category = obj.category;
 }
 
-
+//Article object literal
 Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.find('.byline span').text(this.author);
@@ -19,17 +19,19 @@ Article.prototype.toHtml = function() {
   $newArticle.find('h1').html(this.title);
   $newArticle.find('.article-body').html(this.body);
   $newArticle.attr('data-category', this.category);
- // Removing the class so the display changes from none to block
+ // Remove the class so the display changes
   $newArticle.removeClass('template');
   return $newArticle;
 };
 
-/*  for each object in myLocalData array, create a new object with Article obj constructor, then push it to the articles array */
+//Create a new obj w/article obj constructor for each object in myData array
+//push it to the articles array
 myLocalData.forEach(function(obj) {
   articles.push(new Article(obj));
 });
 
-/* appending each article to my html as a new <article> within my #articles section*/
+
+//Append each article to html as a new <article> in #articles sect.
 articles.forEach(function(a) {
   $('#articles').append(a.toHtml());
 });
