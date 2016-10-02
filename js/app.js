@@ -1,3 +1,4 @@
+'use strict';
 var articles = [];
 
 /* Object constructor based on my data*/
@@ -22,11 +23,6 @@ Article.prototype.toHtml = function() {
   $newArticle.removeClass('template');
   return $newArticle;
 };
-
-/* sort method so object in myLocalData array with most recent publishedOn(=property) date (=value) will be first in the array */
-myLocalData.sort(function(a, b) {
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-});
 
 /*  for each object in myLocalData array, create a new object with Article obj constructor, then push it to the articles array */
 myLocalData.forEach(function(obj) {
