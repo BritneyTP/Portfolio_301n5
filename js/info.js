@@ -2,7 +2,7 @@
 'use strict';
 //Used Poems and other information as content for right now.
 
-var myLocalData = [
+var myData = [
   {
     title: 'What does it mean to be greater?',
     category: 'Category',

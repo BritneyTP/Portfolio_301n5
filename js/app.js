@@ -1,3 +1,4 @@
+'use strict';
 var articles = [];
 
 /* Object constructor based on my data*/
@@ -9,7 +10,7 @@ function Article(obj) {
   this.category = obj.category;
 }
 
-
+//Article object literal
 Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.find('.byline span').text(this.author);
@@ -18,22 +19,23 @@ Article.prototype.toHtml = function() {
   $newArticle.find('h1').html(this.title);
   $newArticle.find('.article-body').html(this.body);
   $newArticle.attr('data-category', this.category);
- // Removing the class so the display changes from none to block
+ // Remove the class so the display changes from none to block
   $newArticle.removeClass('template');
   return $newArticle;
 };
 
-/* sort method so object in myLocalData array with most recent publishedOn(=property) date (=value) will be first in the array */
-myLocalData.sort(function(a, b) {
+//Sort the method so that the obj in myData array will be first
+myData.sort(function(a, b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
-/*  for each object in myLocalData array, create a new object with Article obj constructor, then push it to the articles array */
-myLocalData.forEach(function(obj) {
+//Create a new obj w/article obj constructor for each object in myData array
+//push it to the articles array
+myData.forEach(function(obj) {
   articles.push(new Article(obj));
 });
 
-/* appending each article to my html as a new <article> within my #articles section*/
+//Append each article to html as a new <article> in #articles sect.
 articles.forEach(function(a) {
   $('#articles').append(a.toHtml());
 });
