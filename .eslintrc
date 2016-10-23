@@ -1,12 +1,12 @@
 {
    "settings": {
-    "ecmascript": 6
+    "ecmascript": 6,
   },
   "ecmaFeatures": {
   },
   "env": {
     "browser": true,
-    "jquery": true
+    "jquery": true,
   },
   "rules": {
     "semi": [2, "always"],
@@ -17,7 +17,7 @@
     "no-multi-spaces": [1, {
       "exceptions": {
         "VariableDeclarator": true,
-        "FunctionExpression": true
+        "FunctionExpression": true,
       }
     }],
     "space-infix-ops": [2, {"int32Hint": false}],

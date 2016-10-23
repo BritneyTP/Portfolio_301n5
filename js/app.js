@@ -1,4 +1,5 @@
 'use strict';
+// Articles array that loadAll is pushing into
 var articles = [];
 
 /* Object constructor based on my data*/
@@ -27,6 +28,32 @@ Article.prototype.toHtml = function() {
 
   return template(this);
 };
+
+Article.fetchAll = function() {
+  $.ajax({
+    url: 'data/word.json',
+    type: 'GET',
+    dataType: 'json',
+    success: function(data){
+      console.log(data);
+      Article.loadAll(data)
+    },
+  });
+};
+
+
+Article.loadAll = function(jsonData) {
+  // Sort by data from the json data
+  jsonData.sort(function(a, b) {
+    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  });
+
+  // Push to the articles array on top
+  jsonData.forEach(function(obj) {
+    articles.push(new Article(obj));
+  });
+}
+
 
 //Sort the method so that the obj in myData array will be first
 myData.sort(function(a, b) {
