@@ -10,15 +10,9 @@
   <link rel="stylesheet" href="styles/icons.css">
   <!-- added the favicon of code fellows -->
 <!-- Add handlebars script to hold template -->
-  <script id="article-template" type="text/x-handlebars-template">
-    <article  data-category="{{category}}">
-      <!-- <article  data-category="{{category}}"> -->
+  
       <header>
-        <h1>{{ title }}</h1>
-        <div class="byline">
-          By <address><a href="{{ authorlink }}">{{ author }}</a></address>
-          published <time pubdate datetime="{{ publishedOn }}">{{ publishedStatus }}</time>
-        </div>
+
       </header>
       <section class="article-body"> {{{ body }}} </section>
       <a href="#" class="read-on">Read on &rarr;</a>
@@ -27,41 +21,56 @@
 </head>
 
 <body>
-  <header class="main-header">
-    <section class="">
-      <h1>BRITNEY PRESLEY</h1>
-      <h3>DAUGHTER | SISTER | FRIEND | WEB DEVELOPER</h3>
-    </section>
-    <section>
-      <nav>
-        <div class="icon-menu"></div>
-        <ul>
-          <li><a href="https://www.facebook.com/britney.presley.9" target="_blank"><span class="icon-facebook">Facebook</span></a></li>
-          <li><a href="https://twitter.com/BritneyTPresley" target="_blank"><span class="icon-twitter3">Twitter</span></a></li>
-          <li><a href="https://www.instagram.com/britneytpresley/?hl=en" target="_blank"><span class="icon-instagram">Instagram</span></a></li>
-          <li><a href="https://github.com/BritneyTP" target="_blank"><span class="icon-github">Github</span></a></li>
+        <header>  <!-- START OF HEADER -->
+      <div class="header-class">
+
+        <!-- <img src="img/mmLogo2.png" id="header-logo"> -->
+
+        <a id="header-menu" class="icon-menu"></a>
+
+        <ul  id="main-nav" class="the-nav">
+          <li id="home-nav" class="tab" data-content="home"><a href="#">HOME</a></li>
+          <li id="about-nav" class="tab" data-content="about"><a href="#">ABOUT</a></li>
+          <li id="blog-nav" class="tab" data-content="blog"><a href="#">BLOG</a></li>
+          <li id="contact-nav" class="tab" data-content="contact"><a href="#">CONTACT</a></li>
         </ul>
-      </nav>
-    </section>
-    <section class="icons">
-    </section>
-  </header>
+
+      </div>
+    </header>  <!-- END OF HEADER -->
+
   <main>
-    <section id="articles">
-      <article class="template" data-category="placeholder-category">
-        <header class="article-header">
-          <h1>Title</h1>
-          <div class="byline">
-            By <span></span>
-            published <time pubdate datetime="2000-01-01">Publish Time</time>
-          </div>
-        </header>
-        <section class="article-body"></section>
-      </article>
+    <div class="main-class">
+
+    <!-- ============  HOME  ============ -->
+    <section id="homepage" class="tab-content">
+      <!-- BUTTONS -->
+      <div class="button-class">
+        <button type="button" id="resume-button">RESUME</button>
+        <button type="button" id="portfolio-button"></button>
+      </div>
+
+      <!-- NAME -->
+      <div class="name-class">
+        <div class="first-name">BRITNEY</div>
+        <div class="last-name">PRESLEY</div>
+      </div>
     </section>
+
   </main>
-  <footer>
-  </footer>
+
+    <footer>  <!-- START OF FOOTER -->
+    <div class="footer-class">
+
+      <div class="social">
+        <a href="https://github.com/BritneyTP" class="icon-github"></a>
+        <a href="https://www.instagram.com/britneytpresley/?hl=en" class="icon-instagram"></a>
+        <a href="https://twitter.com/BritneyTPresley" class="icon-twitter"></a>
+        <a href="https://www.facebook.com/britney.presley.9" class="icon-facebook2"></a>
+      </div>
+
+    </div>
+  </footer>  <!-- END OF FOOTER -->
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- Added the handlebars.js -->
   <script type="text/javascript"
