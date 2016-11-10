@@ -24,7 +24,7 @@ header h3 {
   font-size: 25px;
 }
 footer{
-  float: left;
+  float: center;
   height:50px;
   font-family: 'Rancho', cursive;
   font-style:italic;
