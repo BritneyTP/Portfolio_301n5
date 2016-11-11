@@ -20,24 +20,16 @@
   <nav class="main-nav">
 
     <!-- =================== HANDLEBARS TEMPLATES ==================== -->
-      <!-- <script id="project-template" type="text/x-handlebars-template">
+      <script id="project-template" type="text/x-handlebars-template">
         <article class="project-template">
           <h2>{{projName}}</h2>
           <div class="byline">
-            developed by <span>{{developers}}</span><br>
-            Deployed On <time>{{deployedOn}}</time>
+            developed by <span>{{ developers }}</span><br>
+            Deployed On <time>{{ deployedOn }}</time>
           </div>
-          <img src="{{projLogo}}" class="proj-logo">
-          <div class="show-full">
-            <img src="{{projFull}}">
-            <p class="project-description">{{{description}}}
-          </div>
-          <div class="link-cont">
-            <button type="button" id="repo-button"><a href="{{projRepo}}">GitHub Repo</a></button>
-            <button type="button" id="url-button"><a href="{{projURL}}">Project URL</a></button><br>
-          </div>
+
         </article>
-      </script> -->
+      </script>
 
 
     <!-- ==================== HEADER ======================= -->
@@ -52,7 +44,9 @@
 
           <div class="links-menu"></div>
 
-          <ul>
+        <a id="header-menu" class="icon-menu"></a>
+
+        <ul  id="main-nav" class="the-nav">
             <li id="home-nav" class="tab" data-content="home"><a href="#">HOME</a></li>
             <li id="about-nav" class="tab" data-content="about"><a href="#">ABOUT</a></li>
           <li id="blog-nav" class="tab" data-content="blog"><a href="#">BLOG</a></li>

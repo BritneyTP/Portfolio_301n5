@@ -3,7 +3,9 @@ main {
   margin: 30px auto 30px auto;
 }
 
-
+body {
+  background-color: gray;
+}
 .main-header {
   background-image: url('http://ap.imagensbrasil.org/images/site-background.jpg');
   background-repeat: no-repeat;
