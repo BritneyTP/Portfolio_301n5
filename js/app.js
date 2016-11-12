@@ -12,16 +12,14 @@ function Article(obj) {
 
 //Article object literal
 Article.prototype.toHtml = function() {
-  var $newArticle = $('article.template').clone();
-  $newArticle.find('.byline span').text(this.author);
-  $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
-  $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 365 / 1000) + ' years ago');
-  $newArticle.find('h1').html(this.title);
-  $newArticle.find('.article-body').html(this.body);
-  $newArticle.attr('data-category', this.category);
- // Remove the class so the display changes from none to block
-  $newArticle.removeClass('template');
-  return $newArticle;
+
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 365 / 1000);
+  this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+  //Add handlebars to render the articles
+  var source = $("#article-template").html();
+  var template = Handlebars.compile(source);
+
+  return template(this);
 };
 
 //Sort the method so that the obj in myData array will be first
