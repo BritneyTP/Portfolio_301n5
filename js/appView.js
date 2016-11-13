@@ -6,12 +6,12 @@ var articleView = {};
 
 //Add event handler to fade in the nav menu
 articleView.handleNavMenu = function() {
-  $('nav').on('click', '.nav-tab', function() {
+  $('nav').on('click', '.tab', function() {
     $('.menu-content').hide();
     var $id = $(this).attr('data-content');
     $('main').find('#' + $id).fadeIn();
   });
-  $('nav .nav-tab:first').click();
+  $('nav .tab:first').click();
 };
 
 //add event handler to show more content
