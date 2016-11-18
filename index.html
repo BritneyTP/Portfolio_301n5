@@ -1,81 +1,144 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta name=”viewport” content=”width=device-width, initial-scale=1”>
+  <meta charset="utf-8">
   <title>BRITNEY PRESLEY PORTFOLIO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ================== STYLES ================== -->
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/modules.css">
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/icons.css">
-  <!-- added the favicon of code fellows -->
-<!-- Add handlebars script to hold template -->
-  
-      <header>
-
-      </header>
-      <section class="article-body"> {{{ body }}} </section>
-      <a href="#" class="read-on">Read on &rarr;</a>
-    </article>
-  </script>
 </head>
 
 <body>
-        <header>  <!-- START OF HEADER -->
-      <div class="header-class">
 
-        <!-- <img src="img/mmLogo2.png" id="header-logo"> -->
+  <nav class="main-nav">
 
-        <a id="header-menu" class="icon-menu"></a>
+    <!-- =================== HANDLEBARS TEMPLATES ==================== -->
+    <script id="article-template" type="text/x-handlebars-template">
+      <article class="article-template">
+        <h2>{{author}}</h2>
+        <div class="byline">
+          developed by <span>{{category}}</span><br>
+          Deployed On <time>{{ publishedOn }}</time>
+        </div>
+      </article>
+    </script>
 
-        <ul  id="main-nav" class="the-nav">
-          <li id="home-nav" class="tab" data-content="home"><a href="#">HOME</a></li>
-          <li id="about-nav" class="tab" data-content="about"><a href="#">ABOUT</a></li>
-          <li id="blog-nav" class="tab" data-content="blog"><a href="#">BLOG</a></li>
-          <li id="contact-nav" class="tab" data-content="contact"><a href="#">CONTACT</a></li>
+    <script id="project-template" type="text/x-handlebars-template">
+      <article class="project-template">
+        <h2>{{projName}}</h2>
+        <div class="byline">
+          developed by <span>{{developers}}</span><br>
+          Deployed On <time>{{deployedOn}}</time>
+        </div>
+        <img src="{{projLogo}}" class="proj-logo">
+        <div class="show-full">
+          <img src="{{projFull}}">
+          <p class="project-description">{{{description}}}
+          </div>
+          <div class="link-cont">
+            <button type="button" id="repo-button"><a href="{{projRepo}}">GitHub Repo</a></button>
+            <button type="button" id="url-button"><a href="{{projURL}}">Project URL</a></button><br>
+          </div>
+        </article>
+      </script>
+
+      <script id="education-template" type="text/x-handlebars-template">
+        <article class="education-template">
+          <div class="ephoto-cont">
+            <img src="{{schoolImage}}">
+          </div>
+          <div class="school-content">
+            <h2>{{school}}</h2>
+            <p class="school-location">{{location}}</p>
+            <p class="years-attended">{{yearsAttended}}</p>
+            <h3 class="degree">{{{degree}}}</h3>
+            <p class="honors">{{honors}}</p>
+            <img src="{{schoolLogo}}">
+          </div>
+        </article>
+      </script>
+
+
+    <!-- ==================== HEADER ======================= -->
+    <header class="main-header">
+      <section class="">
+        <h1>BRITNEY PRESLEY</h1>
+        <h3>DAUGHTER-SISTER-FRIEND-WEB DEVELOPER</h3>
+      </section>
+      <section>
+        <nav class="main-nav">
+          <div class="icon-menu"></div>
+
+          <div class="links-menu"></div>
+
+          <a id="header-menu" class="icon-menu"></a>
+
+          <ul  class="the-nav id="main-nav" ">
+            <li class="tab" id="home-nav"><a href="/">HOME</a></li>
+            <li class="tab" id="about-nav"><a href="about">ABOUT</a></li>
+            <li class="tab" id="blog-nav"><a href="blog">BLOG</a></li>
+            <li class="tab" id="contact-nav"><a href="contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <!-- ====================== MAIN ==================== -->
+    <main>
+      <section class="home-nav">
+      <section id="articles" class="tab-content">
+        <article class="template" data-category="placeholder-category">
+          <header class="article-header">
+            <h1>Title</h1>
+            <div class="byline">
+              By <span></span>
+              published <time pubdate datetime="2000-01-01">Publish Time</time>
+            </div>
+
+            <section id="article-body" class="tab-content"></section>
+            <a href="#" class="read-on">Read-on &rarr;</a>
+          </article>
+        </section>
+      </section>
+
+<!-- =============================== ABOUT ============================== -->
+      <section class="about-nav">
+        <!-- <p> More about us ...  </p> -->
+        <ul>
+          <li class="about"><img src="" style="width:25%;height:25%;" alt="" /><p> Tian was born and raised in Tulsa, Oklahoma where she lived for 17. Upon moving to Stillwater, Ok she attented Oklahoma State University where she obtained a Bachelors degree in University Studies and Health Education and Promotion. Traveling the world she landed in Seattle, Washington where she lives now, fulfilling her dream of helping others find their passion, pursuing their dreams and reaching goals. As a motivational speaker Tian wants to spread Thunder knowledge in a Supersonic land.<p></li>
+          <li class="about"><img src="" style="width:25%;height:25%;" alt="" /> <p>Born and raised in Seattle, Washington, Trent always had a special gift to code faster than any human being alive. He loves hats and aspires to develop video games so that ever child in the world will be so consumed by gaming, that they forget how to live a normal life. </p></li>
+          <li class="about"><img src="" style="width:25%;height:25%; "alt="" /><p>A native of Atlanta, Georgia, Jeremiah Walters has always been passionate about sports, technology and web development. After thinking long and hard about these two main key components of his desire he decided to move his family to Seattle, Washington to create a better opportunity. Jeremiah aspires to build own his own business of free-lance web developers who have the same passion as he did.<p></li>
         </ul>
+      </section>
+      </main>
 
-      </div>
-    </header>  <!-- END OF HEADER -->
+      <!-- ===================== FOOTER ======================= -->
+      <footer>
+        <div class="footer-class">
 
-  <main>
-    <div class="main-class">
+          <div class="social">
+            <a href="https://www.linkedin.com/in/britney-presley-2b518a9b?trk=hp-identity-photo" class="icon-linkedin2"></a>
+            <a href="https://github.com/BritneyTP" class="icon-github"></a>
+            <a href="https://www.instagram.com/britneytpresley/?hl=en" class="icon-instagram"></a>
+            <a href="https://twitter.com/BritneyTPresley" class=".icon-twitter3"></a>
+            <a href="https://www.facebook.com/britney.presley.9" class="icon-facebook"></a>
+          </div>
+        </footer>
 
-    <!-- ============  HOME  ============ -->
-    <section id="homepage" class="tab-content">
-      <!-- BUTTONS -->
-      <div class="button-class">
-        <button type="button" id="resume-button">RESUME</button>
-        <button type="button" id="portfolio-button"></button>
-      </div>
 
-      <!-- NAME -->
-      <div class="name-class">
-        <div class="first-name">BRITNEY</div>
-        <div class="last-name">PRESLEY</div>
-      </div>
-    </section>
+        <!-- ================= VENDOR SCRIPTS =================== -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="vendors/handlebars.js"></script>
+        <script src="js/info.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/appView.js"></script>
+        <!-- <script src="js/mobile.js"></script> -->
+      </body>
 
-  </main>
-
-    <footer>  <!-- START OF FOOTER -->
-    <div class="footer-class">
-
-      <div class="social">
-        <a href="https://github.com/BritneyTP" class="icon-github"></a>
-        <a href="https://www.instagram.com/britneytpresley/?hl=en" class="icon-instagram"></a>
-        <a href="https://twitter.com/BritneyTPresley" class="icon-twitter"></a>
-        <a href="https://www.facebook.com/britney.presley.9" class="icon-facebook2"></a>
-      </div>
-
-    </div>
-  </footer>  <!-- END OF FOOTER -->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <!-- Added the handlebars.js -->
-  <script type="text/javascript"
- src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-  <script src="js/info.js"></script>
-  <script src="js/app.js"></script>
-</body>
-</html>
+      </html>
