@@ -38,18 +38,18 @@ $(document).ready(function() {
   $('#portfolio-button').on('click', function() {
     $('.tab-content').hide();
     $('#portfolio').fadeIn();
-    $('.show-full').hide();
+    $('.title').hide();
     $('body').removeClass('home-body');
   });
 
-  $('#portfolio .proj-logo').on('mouseover', function() {
-    $('.proj-logo').hide();
-    $('.show-full').fadeIn();
+  $('#portfolio .byline').on('mouseover', function() {
+    $('.byline').hide();
+    $('.title').fadeIn();
   });
 
-  $('#portfolio .show-full').on('mouseout', function() {
-    $('.show-full').hide();
-    $('.proj-logo').fadeIn();
+  $('#portfolio .title').on('mouseout', function() {
+    $('.title').hide();
+    $('.byline').fadeIn();
   });
 
 
