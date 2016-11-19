@@ -1,8 +1,18 @@
 main {
   width: 960px;
   margin: 30px auto 30px auto;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  bottom: 60px;
+  width: 100%;
+  overflow: auto;
 }
 
+
+body {
+  background: none;
+}
 
 .main-header {
   background-image: url('http://ap.imagensbrasil.org/images/site-background.jpg');
@@ -23,15 +33,39 @@ header h3 {
   text-align: center;
   font-size: 25px;
 }
-footer{
-  float: center;
-  height:50px;
-  font-family: 'Rancho', cursive;
-  font-style:italic;
-  color:#fff;
-  text-align:center;
-  background-color:#000;
-  padding-top:10px;
-  size:12px;
-  word-spacing: .3em;
+
+/*====================================================*/
+.aboutFill {
+  width: 100%;
+  height: 1000px;
+  background-color: pink;
+  opacity: 0.6;
+}
+
+.blogFill {
+  width: 100%;
+  height: 1000px;
+  background-color: purple;
+  opacity: 0.6;
+}
+
+.contactFill {
+  width: 100%;
+  height: 1000px;
+  background-color: blue;
+  opacity: 0.6;
+}
+.home-body {
+  background: url(../img/mmHero.jpg) no-repeat center fixed;
+  background-size: cover;
+  background-position: right;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background-color: black;
 }

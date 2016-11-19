@@ -34,3 +34,24 @@ a:visited {
   padding-bottom: 25px;
   text-align: justify;
 }
+/*====================================== */
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(60,60,60);
+}
+
+a:hover {
+  color: rgb(210,148,34);
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  display: block;
+}

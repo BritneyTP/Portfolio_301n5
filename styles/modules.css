@@ -1,24 +1,214 @@
-nav ul {
+/* ------------------------------------
+    HEADER
+------------------------------------ */
+.header-cont {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/*LOGO*/
+#header-logo {
+  width: 160px;
+  height: 80px;
+  margin: 10px 0 0 20px;
+}
+
+/*HAMBURGER*/
+#header-menu {
+  float: right;
+  width: 80px;
+  height: 80px;
+  padding: 10px 20px 0 0;
+  font-size: 80px;
+  color: rgb(210,148,34);
+}
+
+/*MAIN NAVIGATION*/
+.the-nav {
+  display: none;
+}
+.open-nav {
   display: block;
-  margin-top: 15px;
+  background: rgb(210,148,34);
+}
+#main-nav li {
+  font-family: 'Bungee', cursive;
+  font-size: 20px;
   text-align: center;
-  /*outline: 5px dotted pink;*/
+  padding: 8px;
+  border-bottom: 2px solid rgb(60,60,60);
+}
+#main-nav li a {
+  color: rgb(60,60,60);
 }
 
-nav li {
-  display: inline;
-  margin-right: 4%;
-  font-size: 18px;
+/* ------------------------------------
+    MAIN
+------------------------------------ */
+.main-cont {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-nav:hover ul {
-  display:block;
-  position:static;
-  margin-top: 15px;
-  text-align: center;
+/*RESUME & PORTFOLIO BUTTONS*/
+.button-class {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
 }
+
+/*NAME*/
+.name-cont {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  z-index: -1;
+}
+.first-name {
+  position: absolute;
+  bottom: 40px;
+  left: calc(50% - 140px);
+  font-family: 'Dr Sugiyama', cursive;
+  font-size: 60px;
+  color: black;
+}
+.last-name {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 143px);
+  font-family: 'Bungee', cursive;
+  font-size: 50px;
+  color: orange;
+}
+
+/* ------------------------------------
+    FOOTER
+------------------------------------ */
+.footer-class {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/*SOCIAL MEDIA*/
+.social {
+  display: flex;
+  justify-content: center;
+  margin-left: -4px;
 }
 .social a {
   padding: 10px 10px;
-  font-size: 4em;
+  font-size: 2em;
+  color: white;
 }
+.social a:hover {
+  color: rgb(210,148,34);
+}
+
+/*=|=|=|=|=|=|=|=|=| 700 |=|=|=|=|=|=|=|=|=*/
+
+@media screen and (min-width: 700px) {
+  /* ------------------------------------
+      HEADER
+  ------------------------------------ */
+
+  /*LOGO SIZE INCREASE*/
+  #header-logo {
+    width: 200px;
+    height: 100px;
+    margin: 10px 0 0 20px;
+  }
+
+  /*HAMBURGER BYE BYE*/
+  #header-menu {
+    display: none;
+  }
+
+  /*MAIN NAVIGATION*/
+  .the-nav {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 22px);
+  }
+  #main-nav li {
+    font-family: 'Bungee', cursive;
+    font-size: 20px;
+    text-align: center;
+    padding: 8px;
+    border-bottom: 2px solid rgb(60,60,60);
+    display: inline-block;
+    font-size: 30px;
+    text-align: center;
+    padding: 6px;
+  }
+/*
+  #main-nav li a {
+    color: rgb(60,60,60);
+  }
+  .the-nav {
+    display: none;
+  }
+  .open-nav {
+    display: block;
+    background: rgb(210,148,34);
+  }
+  .main-nav a {
+    color: rgb(60,60,60);
+  }
+  .main-nav a:hover {
+    color: rgb(210,148,34)
+  }*/
+
+  main {
+    top: 115px;
+    bottom: 90px;
+  }
+
+  /* ------------------------------------
+      MAIN
+  ------------------------------------ */
+
+  /*RESUME & PORTFOLIO BUTTONS*/
+  .button-cont {
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 342.225px);
+    width: auto;
+  }
+
+  /*NAME*/
+  .name-cont {
+    bottom: 30px;
+  }
+  .first-name {
+    bottom: 70px;
+    left: calc(50% -  280px);
+    font-size: 120px;
+  }
+  .last-name {
+    bottom: 0;
+    left: calc(50% - 285.85px);
+    font-size: 100px;
+  }
+
+  /* ------------------------------------
+      FOOTER
+  ------------------------------------ */
+  /*SOCIAL MEDIA*/
+  .social a {
+    padding: 10px 10px;
+    font-size: 4em;
+  }
+}
+
+/*=|=|=|=|=|=|=|=|=| 1060 |=|=|=|=|=|=|=|=|=*/
+
+@media screen and (min-width: 1060px) {
+  /* ------------------------------------
+      HEADER
+  ------------------------------------ */
