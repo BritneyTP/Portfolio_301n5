@@ -1,0 +1,59 @@
+#resume {
+  margin-top: 20px;
+}
+
+#education article {
+  outline: dashed green 2px;
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.school-content {
+  outline: dashed blue 2px;
+  float: right;
+  width: 100%;
+  height: 200px;
+}
+.ephoto-cont {
+  outline: dashed red 2px;
+  float: left;
+  width: 100%;
+  height: auto;
+}
+.ephoto-cont img {
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+#education h2 {
+  margin-top: 20px;
+  float: left;
+  width: 100%;
+  font-family: 'Bungee', cursive;
+  font-size: 20px;
+  text-align: center;
+}
+.school-location {
+  display: block;
+  width: 100%;
+  font-family: 'Great Vibes', cursive;
+  font-size: 18px;
+  text-align: center;
+}
+.years-attended {
+  display: block;
+  width: 100%;
+  font-family: 'Great Vibes', cursive;
+  font-size: 18px;
+  text-align: center;
+}
+.degree {
+  display: block;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.4em;
+  text-align: center;
+}
